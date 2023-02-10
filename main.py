@@ -13,6 +13,9 @@
 #   once they are done, print how many of each fruit they bought along with the subtotal and total
 #   cost of their purchases.
 #
+#   Date Modified: 02/07/2023        By: Joseph P. Merten
+#   Fixed a bug in the final summary.  I forgot f"... and therefore wasn't dosplaying the name.
+#
 ####################################################################################################
 #   imports
 import math
@@ -53,7 +56,7 @@ while buy_fruit.upper() == "Y":
 ####################################################################################################
 #   Print receipt...
 # print(fruit_list)
-print("Order for {user_name}")
+print(f"Order for {user_name}")
 for i in range(3):
     print(f"{fruit_list[i][3]} {fruit_list[i][0]}(s) at ${fruit_list[i][1]} a piece")
     sub_total += fruit_list[i][2]
